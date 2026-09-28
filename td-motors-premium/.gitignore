@@ -1,0 +1,4 @@
+node_modules/
+.env
+data/inquiries.json
+.DS_Store

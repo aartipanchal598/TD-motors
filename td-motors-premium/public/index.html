@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TD Motors | Cars, Detailing & Workshop | Kharadi, Pune</title>
+  <meta name="description" content="TD Motors — premium multi-brand car showroom, detailing studio and automobile workshop in Kharadi, Pune." />
+  <meta name="theme-color" content="#090909" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-mark">TD<span>.</span></div></div>
+
+  <header class="nav">
+    <a class="logo" href="#home">TD<span>MOTORS</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="navLinks">
+      <a href="#showroom">Showroom</a>
+      <a href="#detailing">Detailing</a>
+      <a href="#workshop">Workshop</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#inquiry">Enquire</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">KHARADI · PUNE · AUTOMOTIVE EXPERIENCE</p>
+        <h1>DRIVE<br><em>DIFFERENT.</em></h1>
+        <p class="hero-copy">Explore cars. Protect your drive. Keep every journey performing at its best.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#showroom">Explore Cars <span>↗</span></a>
+          <a class="btn btn-ghost" href="#inquiry">Book a Test Drive</a>
+              <a class="btn btn-ghost" href="tel:+919577230707">Call TD Motors</a>
+        </div>
+        </div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+      <div class="hero-stat">
+        <strong>03</strong><span>Automotive<br>experiences</span>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="section-label reveal">01 / THE TD MOTORS ECOSYSTEM</div>
+      <div class="intro-grid">
+        <h2 class="reveal">One destination.<br><span>Every automotive need.</span></h2>
+        <p class="reveal">From choosing your next car to preserving its finish and maintaining its performance, TD Motors brings showroom, detailing and workshop services together under one premium experience.</p>
+      </div>
+      <div class="experience-grid">
+        <a href="#showroom" class="experience-card reveal">
+          <span>01</span><h3>SHOWROOM</h3><p>Multi-brand cars, carefully presented for your next drive.</p><b>Explore →</b>
+        </a>
+        <a href="#detailing" class="experience-card reveal">
+          <span>02</span><h3>DETAILING STUDIO</h3><p>Premium care designed to restore, protect and elevate.</p><b>Discover →</b>
+        </a>
+        <a href="#workshop" class="experience-card reveal">
+          <span>03</span><h3>WORKSHOP</h3><p>Professional maintenance and repair for confident journeys.</p><b>Book service →</b>
+        </a>
+      </div>
+    </section>
+
+    <section id="showroom" class="section showroom">
+      <div class="section-label reveal">02 / MULTI-BRAND SHOWROOM</div>
+      <div class="split-heading">
+        <h2 class="reveal">Your next car<br><span>starts here.</span></h2>
+        <p class="reveal">Browse a curated multi-brand experience. Inventory, pricing and availability can be updated from the data section in the JavaScript file.</p>
+      </div>
+      <div class="brand-row reveal">
+        <span>TATA MOTORS</span><span>HYUNDAI</span><span>MAHINDRA</span><span>MARUTI SUZUKI</span><span>KIA</span><span>TOYOTA</span>
+      </div>
+      <div class="filter-row reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="SUV">SUV</button>
+        <button class="filter" data-filter="Sedan">Sedan</button>
+        <button class="filter" data-filter="Hatchback">Hatchback</button>
+        <button class="filter" data-filter="EV">Electric</button>
+      </div>
+      <div class="car-grid" id="carGrid"></div>
+    </section>
+
+    <section id="detailing" class="section detailing">
+      <div class="section-label reveal">03 / DETAILING STUDIO</div>
+      <div class="detail-hero">
+        <div class="detail-copy reveal">
+          <p class="eyebrow">PREMIUM CAR CARE</p>
+          <h2>Make your car<br><em>look new again.</em></h2>
+          <p>Professional detailing, paint enhancement and protection services presented as a premium studio experience.</p>
+          <a class="btn btn-primary" href="#inquiry" data-service="Car Detailing">Book Detailing ↗</a>
+        </div>
+        <div class="detail-orb reveal"><div class="orb-ring"></div><div class="orb-text">DETAIL<br>· CARE<br>· PROTECT</div></div>
+      </div>
+      <div class="service-grid" id="detailServices"></div>
+
+      <div class="before-after reveal">
+        <div class="ba-label">BEFORE / AFTER · DRAG THE SLIDER</div>
+        <div class="ba-window">
+          <div class="ba-after"></div>
+          <div class="ba-before"></div>
+          <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Before and after comparison">
+          <div class="ba-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workshop" class="section workshop">
+      <div class="section-label reveal">04 / AUTOMOBILE WORKSHOP</div>
+      <div class="split-heading">
+        <h2 class="reveal">Performance<br><span>you can trust.</span></h2>
+        <p class="reveal">A structured service experience for maintenance, diagnostics and repairs. Book a requirement and the team can follow up with you.</p>
+      </div>
+      <div class="workshop-grid">
+        <div class="workshop-feature reveal">
+          <div class="feature-number">01</div>
+          <h3>PROFESSIONAL<br>CARE</h3>
+          <p>From periodic maintenance to diagnostics and repairs, organize your vehicle service through one simple enquiry.</p>
+          <a href="#inquiry" class="text-link" data-service="Car Service">Book a Service →</a>
+        </div>
+        <div class="workshop-services" id="workshopServices"></div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="section-label reveal">05 / WHY TD MOTORS</div>
+      <div class="why-grid">
+        <div class="why-big reveal"><span>THE</span><strong>TD</strong><span>STANDARD</span></div>
+        <div class="why-list">
+          <article class="why-item reveal"><b>01</b><div><h3>Multi-brand choice</h3><p>One destination to explore multiple automotive brands and categories.</p></div></article>
+          <article class="why-item reveal"><b>02</b><div><h3>End-to-end care</h3><p>Showroom, detailing and workshop services connected in one experience.</p></div></article>
+          <article class="why-item reveal"><b>03</b><div><h3>Customer-first enquiry</h3><p>Clear CTAs make it easy to request a quote, test drive or service.</p></div></article>
+          <article class="why-item reveal"><b>04</b><div><h3>Premium presentation</h3><p>A digital experience designed to feel as considered as the vehicles themselves.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="section-label reveal">06 / VISUAL GALLERY</div>
+      <div class="gallery-head"><h2 class="reveal">Inside the<br><span>experience.</span></h2><p class="reveal">Replace these demo visuals with TD Motors showroom, detailing and workshop photographs before delivery.</p></div>
+      <div class="gallery-grid">
+        <div class="gallery-tile large reveal"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1400&q=85" alt="Premium car" loading="lazy"></div>
+        <div class="gallery-tile reveal"><img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1f5?auto=format&fit=crop&w=900&q=85" alt="Car interior" loading="lazy"></div>
+        <div class="gallery-tile reveal"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&q=85" alt="Automotive detailing" loading="lazy"></div>
+        <div class="gallery-tile reveal"><img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=900&q=85" alt="Automotive workshop" loading="lazy"></div>
+        <div class="gallery-tile reveal"><img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=85" alt="Sports car" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="section-label reveal">07 / CUSTOMER VOICE</div>
+      <div class="testimonial-wrap reveal">
+        <span class="quote-mark">“</span>
+        <p id="testimonialText">Replace this demo testimonial with a verified TD Motors customer review before launch.</p>
+        <div><strong id="testimonialName">Customer Review</strong><span>TD Motors</span></div>
+        <div class="testimonial-controls"><button id="prevTest">←</button><button id="nextTest">→</button></div>
+      </div>
+    </section>
+
+    <section id="inquiry" class="section inquiry">
+      <div class="section-label reveal">08 / START A CONVERSATION</div>
+      <div class="inquiry-grid">
+        <div class="inquiry-copy reveal">
+          <p class="eyebrow">ENQUIRE · BOOK · DISCOVER</p>
+          <h2>Tell us what<br><em>you need.</em></h2>
+          <p>Whether you're exploring a car, planning a detailing treatment or booking a workshop visit, send one enquiry and continue on WhatsApp.</p>
+          <div class="mini-contact"><span>📍</span><p>TD Motors<br>Kharadi, Pune</p></div>
+        </div>
+        <form id="inquiryForm" class="inquiry-form reveal" novalidate>
+          <div class="form-row">
+            <label>Full Name *<input name="fullName" required placeholder="Your name"></label>
+            <label>Mobile Number *<input name="mobile" required inputmode="numeric" placeholder="+91 98XXXXXXXX"></label>
+          </div>
+          <div class="form-row">
+            <label>Email Address *<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label>Interested Brand<select name="brand"><option value="">Select brand</option><option>Tata Motors</option><option>Hyundai</option><option>Mahindra</option><option>Maruti Suzuki</option><option>Kia</option><option>Toyota</option><option>Other</option></select></label>
+          </div>
+          <div class="form-row">
+            <label>Interested Car / Model<input name="carModel" placeholder="e.g. SUV / model"></label>
+            <label>Service Required *<select name="serviceRequired" required><option value="">Choose requirement</option><option>Car Inquiry</option><option>Test Drive</option><option>Car Detailing</option><option>Ceramic Coating</option><option>PPF</option><option>Car Washing</option><option>Car Service</option><option>Workshop</option><option>General Inquiry</option></select></label>
+          </div>
+          <label>Preferred Date / Time<input name="preferredDateTime" type="datetime-local"></label>
+          <label>Message / Requirement<textarea name="message" rows="4" placeholder="Tell us what you are looking for..."></textarea></label>
+          <div id="formMessage" class="form-message" role="status"></div>
+          <button class="btn btn-primary submit-btn" type="submit">Submit Inquiry <span>↗</span></button>
+          <button class="btn btn-whatsapp" type="button" id="whatsappBtn">Continue on WhatsApp <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <div class="section-label">09 / CONTACT</div>
+        <h2>LET'S TALK<br><em>ABOUT CARS.</em></h2>
+        <div class="contact-details">
+          <div><small>LOCATION</small><p>TD Motors<br>Kharadi, Pune, Maharashtra</p></div>
+          <div>
+  <small>PHONE / WHATSAPP</small>
+  <p>
+    <a href="tel:+919577230707">+91 95772 30707</a><br>
+    <a href="https://wa.me/919577230707" target="_blank" rel="noopener">
+      WhatsApp
+    </a>
+  </p>
+</div>
+          <div>
+  <small>EMAIL</small>
+  <p>
+    <a href="mailto:info.technodriven@gmail.com">
+      info.technodriven@gmail.com
+    </a>
+  </p>
+</div>
+<div>
+  <small>WEBSITE</small>
+  <p>
+    <a href="https://technodriven.in" target="_blank" rel="noopener">
+      technodriven.in ↗
+    </a>
+  </p>
+</div>
+          <div><small>SOCIAL</small><p><a href="https://www.instagram.com/td_motors_multibrand/" target="_blank" rel="noopener">Instagram ↗</a></p></div>
+        </div>
+        <a class="map-placeholder" href="https://www.google.com/maps/search/?api=1&query=TD+Motors+Kharadi+Pune" target="_blank" rel="noopener">
+          <span>OPEN IN GOOGLE MAPS</span><b>→</b>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top"><a class="logo" href="#home">TD<span>MOTORS</span></a><p>Cars · Care · Performance</p></div>
+    <div class="footer-bottom"><span>© 2026 TD Motors. All rights reserved.</span><span>Designed for a premium automotive experience.</span></div>
+  </footer>
+
+  <a class="floating-wa" id="floatingWa" href="#" aria-label="WhatsApp">WA</a>
+  <script src="app.js"></script>
+</body>
+</html>
