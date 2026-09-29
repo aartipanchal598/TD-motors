@@ -41,3 +41,168 @@ footer{padding:30px 5vw;background:#070707}.footer-top,.footer-bottom{display:fl
 @media(max-width:600px){
  .nav{padding:0 5vw}.section{padding:80px 5vw}.hero{min-height:92vh;padding:120px 6vw 80px}.hero h1{font-size:70px}.hero-copy{font-size:13px}.hero-actions{flex-direction:column;align-items:stretch}.experience-grid,.car-grid,.service-grid,.contact-details,.form-row,.gallery-grid{grid-template-columns:1fr}.brand-row span{flex:0 0 50%;border-bottom:1px solid var(--line)}.car-image{height:210px}.detail-orb{justify-self:center;width:270px;height:270px}.ba-window{height:330px}.workshop-feature{min-height:330px}.workshop-feature h3{font-size:35px}.inquiry-form{padding:22px}.inquiry-copy h2{font-size:50px}.contact{padding:80px 6vw}.contact h2{font-size:70px}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
 }
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 55px;
+}
+
+.contact-action {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 100px;
+    padding: 22px;
+    border: 1px solid rgba(0,0,0,.18);
+    color: #080808;
+    transition: .35s ease;
+}
+
+.contact-action:hover {
+    background: #080808;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.contact-action > span:last-child {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.contact-action small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: .18em;
+    margin-bottom: 7px;
+    opacity: .65;
+}
+
+.contact-action strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+@media (max-width: 700px) {
+
+    .contact-actions {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-action {
+        min-height: 82px;
+        padding: 17px;
+    }
+
+    .contact-action strong {
+        font-size: 11px;
+    }
+}
+.location-section {
+    padding: 120px 8vw;
+    background: #0b0b0b;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
+    align-items: stretch;
+    margin-top: 55px;
+}
+
+.location-copy h2 {
+    font: 800 clamp(48px, 6vw, 82px)/.9 Manrope;
+    letter-spacing: -.06em;
+    margin: 25px 0;
+}
+
+.location-copy h2 span {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,.7);
+}
+
+.location-copy p {
+    max-width: 430px;
+    margin-bottom: 30px;
+}
+
+.map-card {
+    min-height: 430px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.75)
+        ),
+        url("https://images.unsplash.com/photo-1524666041070-9cffc5a5d7d0?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+}
+
+.map-overlay {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.7);
+    backdrop-filter: blur(15px);
+
+    color: white;
+}
+
+.map-overlay span {
+    color: #d7b46a;
+    font-size: 10px;
+    letter-spacing: .2em;
+}
+
+.map-overlay strong {
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+@media (max-width: 700px) {
+
+    .location-section {
+        padding: 80px 5vw;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-card {
+        min-height: 300px;
+    }
+
+    .map-overlay {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
